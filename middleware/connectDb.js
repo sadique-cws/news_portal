@@ -1,11 +1,13 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
 
-const connectDb = handler => async (req, res) => {
-    if(mongoose.connection.readyState){
-        return handler(req, res);
-    }
-    await mongoose.connect("mongodb://127.0.0.1:27017/newsPortal")
-    return handler(req,res);
-} 
+// const connectDb = handler => async (req, res) => {
+//     if(mongoose.connections[0].readyState){
+//         return handler(req, res);
+//     }
+//     await mongoose.connect("mongodb://127.0.0.1:27017")
+//     .then(db => console.log('DB is connected'))
+//     .catch(err => console.log(err));
+//     return handler(req,res);
+// } 
 
-export default connectDb;
+// export default connectDb;

@@ -1,11 +1,6 @@
-import connectDb from '@/middleware/connectDb'
 import Post from '@/models/Post'
+import { NextResponse } from 'next/server'
 
-const handler = async(req,res) => {
-   if(req.method == "GET"){
-    let data = await Post.find()
-    res.status(200).json({ data });
-   }
+export function GET(request){
+    return NextResponse.json({"hello":"testsing"})
 }
-
-export default connectDb(handler);
